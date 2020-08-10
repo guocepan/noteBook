@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>软件测试</title>
+</head>
+<body>
+	<h1>软件测试</h1>
+	<p><strong>目的</strong>：质检</p>
+	
+	<h2>计算机组成</h2>
+	<ul>
+		<li><strong>硬件系统</strong></li>
+		<ul>
+			<li>cpu</li>
+			<li>显卡</li>
+			<li>网卡</li>
+			<li>声卡</li>
+			<li>硬盘</li>
+			<li>内存条</li>
+			
+		  <li>输入设备</li>
+			<ul>
+				<li>鼠标</li>		
+				<li>键盘</li>		
+				<li>麦克风</li>
+			</ul>
+		</ul>
+		<ul>
+			<li>输出设备</li>
+			<ul>
+				<li>显示屏</li>
+				<li>喇叭</li>
+				<li></li>
+			</ul>
+		</ul>
+		<li><strong>软件系统</strong></li>
+		<ul>
+			<li>系统软件</li>
+			<li>应用软件</li>
+		</ul>
+	</ul>
+
+<h3>软件架构</h3>
+<h4>C/S</h4>
+<ul>
+	<li>client/server:是客户端和服务器。如：qq，微信</li>
+</ul>
+<h4>B/S</h4>
+<ul>
+	<li>Browser/server:网页个服务器。如：淘宝，京东</li>
+</ul>
+
+<h3>osi模型和tcp5模型关系</h3>
+<img src="./img/osi.PNG" >
+<ol>
+	<h5>OSI参考模型</h5>
+	<li>应用层</li>
+	<li>表示层</li>
+	<li>会话层</li>
+	<li>传输层</li>
+	<li>网络层</li>
+	<li>数据链路层</li>
+	<li>物理层</li>
+</ol>
+
+<ol>
+	<h5>TCP、IP模型</h5>
+	<li>应用层</li>
+	<li>传输层</li>
+	<li>网络层</li>
+	<li>数据链路层</li>
+	<li>物理层</li>
+</ol>
+
+<div>
+	<h4>IP 地址</h4>
+	<ul>
+		<li>第1类地址：1-126</li>
+		<li>第2类地址：128-191</li>
+		<li>第3类地址：192-223</li>
+	</ul>
+	<h4>保留IP地址：只能在局域网中用</h4>
+	<ul>
+		<li>10</li>
+		<li>127</li>
+		<li>172.16.0.0 ---  172.31.255.255</li>
+		<li>192.168.*.*</li>
+	</ul>
+</div>
+
+<div>
+	<h3>常用dos命令</h3>
+	<ul>
+		<li>arp  -a :ip地址和对应的物理地址</li>
+		<ul>
+			<li>网管需要把物理地址绑定在路由器上，电脑才能上网</li>
+		</ul>
+		<li>ipconfig  -all: 查看ip地址</li>
+		<li>dir    : 目录，查看目录</li>
+		<li>md ：  创建文件</li>
+		<li>rd    :删除文件夹。目录里不能有东西</li>
+		<li>copy  复制文件</li>
+		<li>move  移动文件、或者叫剪切</li>
+		<li>del   删除文件，如果del后面跟的是目录，会将目录里的文件都删除掉</li>
+		
+	</ul>
+</div>
+
+<div>
+	<h3>软件测试的质量模型</h3>
+	<h4>六大特点：</h4>
+	<ul>
+		<li>功能性：</li>
+		<ul>
+			<li>提供明确和隐含的功能。比如：银行，必须能取钱，存钱，开账户。隐含的条件：提供笔，纸，至少说明什么时候上班</li>
+		</ul>
+		<li>可靠性</li>
+		<ul>
+			<li>一、设备最好不要出现故障</li>
+			<li>二、设备出现故障，不影响主要功能和业务</li>
+			<li>三、影响主要功能和业务，能尽快恢复并且定位</li>
+		</ul>
+		<li>易用性</li>
+		<ul>
+			<li>易懂，易学，易用，好看</li>
+		</ul>
+		<li>效率</li>
+		<ul>
+			<li>产品性能相对较好</li>
+		</ul>
+		<li>可维持性：可更新</li>
+		<li>可移植性（可以跨不同的平台。）</li>
+	</ul>
+	
+</div>
+
+
+<div>
+	<h3>软件质量模型保证（SQA）</h3>
+	<ul>
+		<span><strong>目的：</strong></span>
+		<li>软件制作过程对于领导是可见的。</li>
+		<li>他是一套方法和计划向领导保证</li>
+	</ul>
+	<ol>
+		<span><strong>目标：</strong></span>
+		<li>有计划的进行</li>
+		<li>遵循了步骤和需求</li>
+		<li>及时通知对应人员</li>
+		<li>高层能了解到项目内部</li>
+		<li>软件质量要测试工作来保证</li>
+		
+	</ol>
+</div>
+
+
+
+<div>
+	<h2>软件测试基本流程</h2>
+	<ol>
+		<li>需求分析</li>
+		<li>编写测试用例（测什么，怎么测）</li>
+		<li>评审设计用例</li>
+		<li>搭建测试环境</li>
+		<li>等待开发提交测试包</li>
+		<li>部署测试包</li>
+		<li>冒烟测试（对软件的基本功能进行测试）</li>
+		<li>执行测试用例</li>
+		<li>BUG跟踪处理（回归测试）</li>
+		<li>N轮后附和需求</li>
+		<li>测试结束</li>
+	</ol>
+</div>
+
+
+<div>
+	<h2>软件测试分类</h2>
+	
+</div>
+
+
+<div>
+	<ol>
+		<li><h3>按照阶段</h3></li>
+		<div>
+			<ol>
+				
+				<li>单元测试</li>
+				<li>集成测试</li>
+				<li>系统测试</li>
+			</ol>
+		</div>
+		
+		
+		<li><h3>代码覆盖</h3></li>
+		<div>
+			<ol>
+				<li>白盒测试</li>
+				<li>黑盒测试</li>
+					<div>
+						<ol>
+							<li><strong>功能测试</strong></li>
+								<div>
+									<ol>
+										<li>界面测试</li>
+										<li>逻辑功能测试</li>
+										<li>易用性测试</li>
+										<li>安装测试</li>
+										<li>兼容性测试</li>
+									</ol>
+								</div>
+							<li><strong>性能测试</strong></li>
+								<div>
+									<ol>
+										<li>一般性能测试</li>
+										<li>稳定性测试</li>
+										<li>负载测试</li>
+										<li>压力测试</li>
+									</ol>
+								</div>
+						</ol>
+					</div>
+			</ol>
+		</div>
+		
+		
+		
+		<li><h3>是否运行</h3></li>
+			<div>
+				<ol>
+					<li>静态测试</li>
+					<li>动态测试</li>
+				</ol>
+			</div>
+		<li><h3>其他</h3></li>
+			<div>
+				<ol>
+					<li>冒烟测试</li>
+					<li>回归测试</li>
+					<li>验收测试</li>
+						<div>
+							<ol>
+								<li>α测试：内部版本，可能存在的bug较多，不建议用户安装使用</li>
+								<li>β测试：公测版本，对所有的客户开放。通过客户的反馈再修改细节</li>
+								<li>γ测试：与正式版相差无几</li>
+							</ol>
+						</div>
+					<li>随机测试</li>
+				</ol>
+			</div>
+		<li><h3>是否自动化</h3></li>
+			<div>
+				<ul>
+					<li>手工测试</li>
+					<li>自动化测试</li>
+				</ul>
+			</div>
+	</ol>
+</div>
+	
+<div id="talble">
+	<table border="1" cellspacing="2" cellpadding="2">
+		<tr><th>用例编号</th> 	<th>等价类划分</th> 		<th>输入框1</th>			<th>输入框2/th>		<th>预估结果</th> 	<th>是否BUG</th>  </tr>
+		<tr><td>1</td>			<td>有效</td>			<td>1到100整数</td>		<td>5</td>			<td>正确</td>		<td>是</td></tr>
+		<tr><td>2</td>			<td>有效</td>			<td>5</td>				<td>1到100整数</td>	<td>3</td>			<td>是</td></tr>
+		<tr><td>3</td>			<td>无效</td>			<td>空</td>		<td>空</td>			<td>3</td>			<td>是</td></tr>
+		<tr><td>4</td>			<td>无效</td>			<td>1到100整数</td>		<td>5</td>			<td>3</td>			<td>是</td></tr>
+		<tr><td>5</td>			<td>无效</td>			<td>1到100整数</td>		<td>5</td>			<td>3</td>			<td>是</td></tr>
+		<tr><td>6</td>			<td>无效</td>			<td>1到100整数</td>		<td>5</td>			<td>3</td>			<td>是</td></tr>
+		
+	</table>
+</div>	
+
+<div id="qqTable">
+	<table border="1" cellspacing="4" cellpadding="4">
+		<tr><th>案例：测试QQ登陆账号</th></tr>
+		<tr><th>需求：账号要求6-10之间的整数</th></tr>
+		<tr><th>用例编号</th>   <th>等价类划分</th>  <th>账号框</th>  <th>密码框</th></tr>
+		<tr><td>Data</td></tr>
+	</table>
+	
+	
+	
+</div>
+	
+	
+	
+	
+</body>
+</html>
